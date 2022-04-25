@@ -6,18 +6,22 @@ public class Pratica_04_7 {
 
 	public static void pratica() {
 		Scanner scan = new Scanner(System.in);
+		String sair;
+		do {
+			System.out.print("Digite o valor de A: ");
+			float num1 = scan.nextFloat();
 
-		System.out.print("Digite o valor de A: ");
-		float num1 = scan.nextFloat();
+			System.out.print("Digite o valor de B: ");
+			float num2 = scan.nextFloat();
 
-		System.out.print("Digite o valor de B: ");
-		float num2 = scan.nextFloat();
+			System.out.print("Digite o valor de C: ");
+			float num3 = scan.nextFloat();
 
-		System.out.print("Digite o valor de C: ");
-		float num3 = scan.nextFloat();
+			segundoGrau(num1, num2, num3);
 
-		segundoGrau(num1, num2, num3);
-
+			System.out.println("sair ?: (S ou N)");
+			sair = scan.next();
+		} while (!sair.equalsIgnoreCase("S"));
 	}
 
 	public static void segundoGrau(float a, float b, float c) {

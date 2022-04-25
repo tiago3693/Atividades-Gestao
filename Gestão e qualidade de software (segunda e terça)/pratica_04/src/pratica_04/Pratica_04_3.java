@@ -26,7 +26,7 @@ public class Pratica_04_3 {
 		mediaCalc(num1, num2, num3);
 		System.out.println("sair ?: (S ou N)");
 		sair = scan.next();
-	} while (!sair.equals("S"));
+	} while (!sair.equalsIgnoreCase("S"));
 	}
 
 	public static void mediaCalc(int num1, int num2, int num3) {

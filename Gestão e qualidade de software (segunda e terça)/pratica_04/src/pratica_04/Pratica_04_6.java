@@ -6,18 +6,22 @@ public class Pratica_04_6 {
 
 	public static void pratica() {
 		Scanner scan = new Scanner(System.in);
+		String sair;
+		do {
+			System.out.print("Digite o valor de X: ");
+			float num1 = scan.nextFloat();
 
-		System.out.print("Digite o valor de X: ");
-		float num1 = scan.nextFloat();
+			System.out.print("Digite o valor de Y: ");
+			float num2 = scan.nextFloat();
 
-		System.out.print("Digite o valor de Y: ");
-		float num2 = scan.nextFloat();
+			System.out.print("Digite o valor de Z: ");
+			float num3 = scan.nextFloat();
 
-		System.out.print("Digite o valor de Z: ");
-		float num3 = scan.nextFloat();
+			matriz(num1, num2, num3);
 
-		matriz(num1, num2, num3);
-
+			System.out.println("sair ?: (S ou N)");
+			sair = scan.next();
+		} while (!sair.equalsIgnoreCase("S"));
 	}
 
 	public static void matriz(float x, float y, float z) {
