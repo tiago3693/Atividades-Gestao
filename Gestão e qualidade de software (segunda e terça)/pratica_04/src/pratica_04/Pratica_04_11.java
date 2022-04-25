@@ -7,10 +7,13 @@ public class Pratica_04_11 {
 
 	public static void pratica() {
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Digite a quantidade de dias: ");
-		int num1 = scan.nextInt();
+		int num1;
+		do {
+			System.out.print("Digite a quantidade de dias: ");
+			num1 = scan.nextInt();
 
-		diaria(num1);
+			diaria(num1);
+		} while (num1 != -1);
 	}
 
 	public static void diaria(int num1) {

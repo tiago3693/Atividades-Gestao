@@ -6,8 +6,10 @@ public class Pratica_04_3 {
 
 	public static void pratica() {
 		Scanner scan = new Scanner(System.in);
+		String sair;
+		do {
 		int num1 = -1, num2 = -1, num3 = -1;
-
+	
 		while (num1 < 0 || num1 > 10) {
 			System.out.println("nota 1 de 0 a 10: ");
 			num1 = scan.nextInt();
@@ -22,7 +24,9 @@ public class Pratica_04_3 {
 		}
 
 		mediaCalc(num1, num2, num3);
-
+		System.out.println("sair ?: (S ou N)");
+		sair = scan.next();
+	} while (!sair.equals("S"));
 	}
 
 	public static void mediaCalc(int num1, int num2, int num3) {

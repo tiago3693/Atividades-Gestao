@@ -6,14 +6,16 @@ public class Pratica_03_9 {
 
 	public static void pratica() {
 		Scanner scanner = new Scanner(System.in);
+		float cateto1,cateto2;
+		do {
 		System.out.println("cateto1: ");
-		float cateto1 = scanner.nextFloat();
+		cateto1 = scanner.nextFloat();
 		
 		System.out.println("cateto2: ");
-		float cateto2 = scanner.nextFloat();
+		cateto2 = scanner.nextFloat();
 		
 		System.out.println("hipotenusa: " + (Math.sqrt((Math.pow(cateto1, 2) + Math.pow(cateto2, 2)))));
-
+		} while (cateto1 != -1 && cateto2 != -1);
 	}
 
 }

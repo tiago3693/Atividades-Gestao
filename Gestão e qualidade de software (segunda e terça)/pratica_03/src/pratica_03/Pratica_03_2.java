@@ -6,14 +6,17 @@ public class Pratica_03_2 {
 
 	public static void pratica() {
 		Scanner scanner = new Scanner(System.in);
+		int anon, anoa;
+		do {
 		System.out.println("ano nascimento: ");
-		int anon = scanner.nextInt();
+		anon = scanner.nextInt();
 
 		System.out.println("ano atual: ");
-		int anoa = scanner.nextInt();
+		anoa = scanner.nextInt();
 
 		System.out.println("idade: " + (anoa - anon));
 		System.out.println("idade em 2050: " + (2050 - anon));
-	}
+		} while (anon != -1 && anoa != -1);
+		}
 
 }

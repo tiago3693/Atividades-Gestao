@@ -7,14 +7,17 @@ public class Pratica_04_12 {
 
 	public static void pratica() {
 		Scanner scan = new Scanner(System.in);
+		int num1;
+		String num2;
+		do {
+			System.out.print("Digite a idade: ");
+			num1 = scan.nextInt();
 
-		System.out.print("Digite a idade: ");
-		int num1 = scan.nextInt();
+			System.out.print("Digite o sexo (M / F): ");
+			num2 = scan.next();
 
-		System.out.print("Digite o sexo (M / F): ");
-		String num2 = scan.next();
-
-		academia(num1, num2);
+			academia(num1, num2);
+		} while (num1 != -1 && !num2.equals("-1"));
 	}
 
 	public static void academia(int idade, String sexo) {

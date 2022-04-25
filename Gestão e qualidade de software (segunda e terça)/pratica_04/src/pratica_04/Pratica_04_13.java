@@ -6,15 +6,18 @@ public class Pratica_04_13 {
 
 	public static void pratica() {
 		Scanner scan = new Scanner(System.in);
-
+		String num1;
+		int num2;
+		do {
 		System.out.print("Digite o tipo de apartamento (simples / duplo): ");
-		String num1 = scan.next();
+		num1 = scan.next();
 
 		System.out.print("Digite a quantidade de dias: ");
-		int num2 = scan.nextInt();
+		num2 = scan.nextInt();
 
 		apartamento(num1, num2);
-	}
+		} while (!num1.equals("-1") && num2 != -1);
+		}
 
 	public static void apartamento(String ap, int qtd) {
 		ap = ap.toLowerCase();
