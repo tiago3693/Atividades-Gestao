@@ -1,4 +1,4 @@
-package decorator;
+package decoratorCardapio;
 
 public class BaseDecorator implements Adicional {
 
@@ -16,6 +16,11 @@ public class BaseDecorator implements Adicional {
 	@Override
 	public float custo() {
 		return wrapper.custo();
+	}
+	
+	@Override
+	public Character tamanho() {
+		return wrapper.tamanho();
 	}
 	
 }

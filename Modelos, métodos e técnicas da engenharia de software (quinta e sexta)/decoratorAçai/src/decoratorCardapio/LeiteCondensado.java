@@ -1,4 +1,4 @@
-package decorator;
+package decoratorCardapio;
 
 public class LeiteCondensado extends BaseDecorator{
 	
