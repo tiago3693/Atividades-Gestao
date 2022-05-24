@@ -1,7 +1,5 @@
 package pratica_12_2;
 
-import java.util.Scanner;
-
 public class Divisao extends ArithmeticException{
 
 	private int num1;
