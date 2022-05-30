@@ -6,13 +6,21 @@ public class Acai implements Adicional {
 		p, m, g
 	}*/
 	private Character tamanho;
+	private float custoI;
 	
 	public Acai(Character tamanho) {
 		this.tamanho = tamanho;
+		if (tamanho.equals('p')) {
+			this.custoI = 10;
+		} else if (tamanho.equals('m')) {
+			this.custoI = 15;
+		} else if (tamanho.equals('g')) {
+			this.custoI = 20;
+		}
 	}
 
 	private String descricao = "açai";
-	private float custoI = 10;
+	
 
 	@Override
 	public String getDescricao() {
