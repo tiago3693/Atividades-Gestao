@@ -9,6 +9,8 @@ public class DepartamentoFinanceiro implements Departamento {
 		this.nome = nome;
 	}
 
+	
+	// Imprime os detalhes dessa classe
 	@Override
 	public void imprimeDetalhesDepartamento() {
 		System.out.println("id: " + id + " | nome: " + nome);
