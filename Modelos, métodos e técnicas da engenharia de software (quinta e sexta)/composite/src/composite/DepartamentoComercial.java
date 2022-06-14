@@ -8,7 +8,8 @@ public class DepartamentoComercial implements Departamento {
 		this.id = id;
 		this.nome = nome;
 	}
-
+	
+	// Imprime os detalhes dessa classe
 	@Override
 	public void imprimeDetalhesDepartamento() {
 		System.out.println("id: " + id + " | nome: " + nome);

@@ -1,20 +1,23 @@
 package main;
 
 public class Calculadora {
-	
-	public static int soma (int a, int b) {
-		return a + b;
-	}
-	
-	public static int subtracao (int a, int b) {
-		return a - b;
-	}
-	
-	public static int divisao (int a, int b) {
-		return a / b;
-	}
-	
-	public static int multiplicacao (int a, int b) {
-		return a * b;
+
+	public static int calcular(String cal) {
+		String[] calculo = cal.trim().replaceAll(" +", " ").split(" ");
+		int a = Integer.parseInt(calculo[0]);
+		int b = Integer.parseInt(calculo[2]);
+
+		switch (calculo[1]) {
+		case "+":
+			return a + b;
+		case "-":
+			return a - b;
+		case "/":
+			return a / b;
+		case "*":
+			return a * b;
+		default:
+			return 0;
+		}
 	}
 }
