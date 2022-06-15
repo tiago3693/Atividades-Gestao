@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class PraticaMain {
 
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		/*Scanner scan = new Scanner(System.in);
 		try {
 			String opcao = "s";
 			do {
@@ -49,6 +49,7 @@ public class PraticaMain {
 			e.getStackTrace();
 		} finally {
 			scan.close();
-		}
+		}*/
+		SegundoGrau.pratica();
 	}
 }
