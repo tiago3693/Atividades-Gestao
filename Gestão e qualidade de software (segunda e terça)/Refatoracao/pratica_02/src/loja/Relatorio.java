@@ -4,54 +4,61 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Relatorio implements InterfaceRelatorio {
+public class Relatorio extends Carrinho implements InterfaceRelatorio {
+	private double total;
 
-	public void relatorio() {
-
-		boolean clienteVIP = false;
-
-		Produto p1 = new Produto("Arroz", 5, 18.75);
-		Produto p2 = new Produto("Feijão", 1, 4.95);
-		Produto p3 = new Produto("Leite", 1, 3.49);
-
-		ArrayList<Produto> produtos = new ArrayList<Produto>();
-		produtos.add(p1);
-		produtos.add(p2);
-		produtos.add(p3);
-
-		double total = total(produtos);
-		desconto(clienteVIP, total);
-		taxaDeEntrega(total);
-		System.out.println(total);
+	public Relatorio(boolean clienteVIP) {
+		super(clienteVIP);
+		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public double total(ArrayList<Produto> produtos) {
-		// Calcula o somatório dos preços:
-		double total = 0;
-		for (Produto produto : produtos) {
-			total += produto.getPreco() * produto.getQuantidade();
-		}
+	public double getTotal() {
 		return total;
 	}
 
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+	public void imprimirRelatorio() {
+		total();
+		desconto();
+		taxaDeEntrega();
+		System.out.println("preço: " + getTotal());
+	}
+
 	@Override
-	public void desconto(boolean clienteVIP, double total) {
+	public void total() {
+		// Calcula o somatório dos preços:
+		setTotal(0);
+		for (Produto produto : getProdutos()) {
+			setTotal(getTotal() +  (produto.getPreco() * produto.getQuantidade()));
+		}
+		System.out.println("preço total dos produtos: " + total);
+	}
+
+	@Override
+	public void desconto() {
 		// Aplica desconto:
-		if (clienteVIP) {
-			total *= 0.90;
+		double temp = getTotal();
+		if (getClienteVIP()) {
+			setTotal(getTotal() * 0.9);
+			System.out.println("desconto: " + (temp - getTotal()));
 		} else {
-			total *= 0.95;
+			setTotal(getTotal() * 0.95);
+			System.out.println("desconto: " + (temp - getTotal()));
 		}
 	}
 
 	@Override
-	public void taxaDeEntrega(double total) {
+	public void taxaDeEntrega() {
 		DayOfWeek diaSemana = LocalDate.now().getDayOfWeek();
 		if (diaSemana == DayOfWeek.SUNDAY) {
-			total += 10.00;
+			setTotal(getTotal() + 10.00);
+			System.out.println("taxa de entrega: 10.00");
 		} else {
-			total += 5.00;
+			setTotal(getTotal() + 5.00);
+			System.out.println("taxa de entrega: 5.00");
 		}
 	}
 
