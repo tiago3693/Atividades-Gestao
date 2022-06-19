@@ -16,7 +16,7 @@ public class Relatorio extends Carrinho implements InterfaceRelatorio {
 		return total;
 	}
 
-	public void setTotal(double total) {
+	private void setTotal(double total) {
 		this.total = total;
 	}
 
