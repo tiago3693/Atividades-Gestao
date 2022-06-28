@@ -1,2 +1,1 @@
-# Faculdade
-repositorios da faculdade
+# Atividades Gestão e qualidade de software
